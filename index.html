@@ -7,56 +7,29 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for smoother scrolling if using anchor links */
-        html {
-            scroll-behavior: smooth;
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8; /* Light background for the whole page */
         }
-        /* Optional: Custom gradient for hero background or other elements */
-        .hero-gradient {
-            background: linear-gradient(to right, #6D28D9, #8B5CF6); /* Purple gradient */
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        /* Custom styles for section padding and alignment */
-        .section-padding {
-            padding: 4rem 0; /* Adjust as needed */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
         }
-        @media (min-width: 768px) {
-            .section-padding {
-                padding: 6rem 0;
-            }
+        ::-webkit-scrollbar-thumb {
+            background: #a8a8a8;
+            border-radius: 10px;
         }
-        /* Animation for services icons on hover */
-        .service-card:hover .service-icon {
-            transform: scale(1.1);
-            transition: transform 0.3s ease-in-out;
-        }
-        /* Specific styles for gallery image overlay */
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 0.5rem; /* Equivalent to rounded-lg */
-        }
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-            text-align: center;
-            padding: 1rem;
-        }
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
+        ::-webkit-scrollbar-thumb:hover {
+            background: #888;
         }
     </style>
 </head>
 <body class="text-gray-800">
+
     <header class="bg-white shadow-lg py-4 px-6 md:px-12 sticky top-0 z-50 rounded-b-lg">
         <nav class="container mx-auto flex flex-wrap justify-between items-center">
             <a href="#" class="text-3xl font-bold text-indigo-700 tracking-tight">
@@ -72,223 +45,355 @@
         </nav>
     </header>
 
-    <section id="home" class="relative bg-cover bg-center h-screen flex items-center justify-center text-white" style="background-image: url('https://placehold.co/1920x1080/6D28D9/FFFFFF/webp');">
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-        <div class="container mx-auto text-center relative z-10 p-6">
-            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight drop-shadow-lg animate-fade-in-up">
+    <section id="home" class="relative bg-gradient-to-r from-indigo-700 to-purple-600 min-h-[70vh] py-20 flex items-center justify-center text-white overflow-hidden rounded-b-xl shadow-xl">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://placehold.co/1920x1080/4A3C8B/FFFFFF?text=Elegant+Banquet+Hall');"></div>
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+
+        <div class="relative z-10 text-center p-8 max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 animate-fade-in-down">
                 Your Perfect Celebration Starts Here
             </h1>
-            <p class="mt-4 text-xl md:text-2xl font-light drop-shadow-md animate-fade-in-up delay-200">
-                Crafting unforgettable memories in the heart of Bodhgaya.
+            <p class="text-xl md:text-2xl mb-10 opacity-90 animate-fade-in-up">
+                Creating Unforgettable Memories at Vishal Banquet Hall, Bodh Gaya.
             </p>
-            <a href="#contact" class="mt-8 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full text-lg shadow-xl transition duration-300 transform hover:scale-105 animate-fade-in-up delay-400">
-                Book Your Event Now
+            <a href="https://form.jotform.com/251425170005443" target="_blank" class="inline-block bg-white text-indigo-700 hover:bg-indigo-100 px-10 py-4 rounded-full text-xl font-semibold shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                Book an Appointment
             </a>
         </div>
     </section>
 
-    <section id="about" class="bg-gray-50 section-padding">
-        <div class="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-10">
-            <div class="md:w-1/2">
-                <img src="https://placehold.co/800x600/C4B5FD/FFFFFF/webp" alt="About Vishal Banquet Hall" class="rounded-xl shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-            </div>
-            <div class="md:w-1/2 text-center md:text-left">
-                <h2 class="text-4xl font-bold text-indigo-800 mb-4">About Vishal Banquet Hall</h2>
-                <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                    Nestled in the serene and spiritual surroundings of Bodhgaya, Vishal Banquet Hall offers a magnificent setting for all your special occasions. With state-of-the-art facilities, elegant interiors, and impeccable service, we are dedicated to making your events truly memorable.
-                </p>
-                <p class="text-lg text-gray-700 leading-relaxed">
-                    From grand weddings to intimate family gatherings, corporate events to festive celebrations, our versatile spaces and experienced team ensure every detail is handled with precision and care, allowing you to relax and cherish every moment.
-                </p>
-            </div>
+    <section class="py-16 bg-white rounded-xl shadow-lg mx-auto max-w-7xl mt-12 px-6 md:px-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-indigo-700 mb-6">Welcome to Vishal Banquet Hall</h2>
+            <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                Nestled in the heart of Bodh Gaya, Vishal Banquet Hall offers a luxurious and versatile space for all your special occasions. From grand weddings to intimate gatherings and corporate events, our elegant ambiance and impeccable service ensure every moment is memorable. Experience unparalleled hospitality and create cherished memories with us.
+            </p>
         </div>
     </section>
 
-    <section id="services" class="bg-white section-padding">
-        <div class="container mx-auto px-6 md:px-12 text-center">
-            <h2 class="text-4xl font-bold text-indigo-800 mb-12">Our Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="service-card bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="service-icon text-indigo-600 text-6xl mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 mx-auto">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25c0 1.952-.8 3.792-2.126 5.093M21 11.25c0-2.316-.764-4.472-2.032-6.216m2.032 6.216a7.5 7.5 0 01-.032-6.216m0 0C19.467 3.518 18.067 2.25 16.5 2.25c-1.033 0-2.146.43-2.912 1.258m-2.292 2.292c.119.119.243.235.37.348M12 21a7.5 7.5 0 007.468-6.532M12 21a7.5 7.5 0 01-7.468-6.532M12 21a7.5 7.5 0 007.468-6.532m-7.468 0c-3.141 0-5.694-2.505-5.694-5.589c0-.603.097-1.196.284-1.764m.933 5.43c.275.275.602.482.955.626m-1.572-2.525c.195-.515.276-1.07.276-1.642 0-2.906-2.203-5.25-4.939-5.25A7.5 7.5 0 002.25 12c0 2.316.764 4.472 2.032 6.216m0 0A7.5 7.5 0 0012 21z"/>
-                        </svg>
+    <section id="services-preview" class="py-16 bg-gray-50 rounded-xl shadow-lg mx-auto max-w-7xl mt-12 px-6 md:px-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-indigo-700 mb-12">Events We Host</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="mx-auto mb-6 w-24 h-24 rounded-full flex items-center justify-center bg-purple-200 text-purple-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2c-3.31 0-6 2.69-6 6c0 2.22 1.21 4.16 3 5.2V17H7v3h4v-2h2v2h4v-3h-2v-3.8c1.79-1.04 3-2.98 3-5.2c0-3.31-2.69-6-6-6m0 4c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2"/></svg>
                     </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Weddings & Receptions</h3>
-                    <p class="text-gray-600">Enchanting settings and bespoke services to make your special day truly magical.</p>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Weddings & Receptions</h3>
+                    <p class="text-gray-600">Celebrate your big day in style with our exquisite wedding arrangements and spacious halls.</p>
                 </div>
-                <div class="service-card bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="service-icon text-indigo-600 text-6xl mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 mx-auto">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 3V4.5m7.5-1.5V4.5M18 10.5V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v4.5m1.5 0v2.25m0 3.75v3.75M21 10.5V6a2.25 2.25 0 00-2.25-2.25H12a2.25 2.25 0 00-2.25 2.25v4.5m1.5 0v2.25m0 3.75v3.75M12 18V6m0 0a2.25 2.25 0 012.25-2.25H21L12 18z"/>
-                        </svg>
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="mx-auto mb-6 w-24 h-24 rounded-full flex items-center justify-center bg-blue-200 text-blue-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><path fill="currentColor" d="M19 2a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3zm0 2h-2v2h2zm0 4h-2v2h2zm0 4h-2v2h2zm0 4h-2v2h2zM5 4h2v2H5zm0 4h2v2H5zm0 4h2v2H5zm0 4h2v2H5zm4-12h6v2H9zm0 4h6v2H9zm0 4h6v2H9zm0 4h6v2H9z"/></svg>
                     </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Birthday & Social Events</h3>
-                    <p class="text-gray-600">Celebrate milestones with lively decor, delicious catering, and fun for all ages.</p>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Birthday & Anniversary Parties</h3>
+                    <p class="text-gray-600">Make every milestone special with our customizable party themes and joyful ambiance.</p>
                 </div>
-                <div class="service-card bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="service-icon text-indigo-600 text-6xl mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 mx-auto">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25C21 10.75 20.9 10.25 20.7 9.8L17.5 3.5C17.2 3.2 16.8 3 16.5 3H7.5C7.2 3 6.8 3.2 6.5 3.5L3.3 9.8C3.1 10.25 3 10.75 3 11.25V18C3 19.104 3.895 20 5 20H19C20.104 20 21 19.104 21 18V11.25Z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 15V18M12 15L9 12M12 15L15 12" />
-                            <circle cx="12" cy="10" r="3" />
-                        </svg>
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="mx-auto mb-6 w-24 h-24 rounded-full flex items-center justify-center bg-pink-200 text-pink-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><path fill="currentColor" d="M16 11V3H8v8H2v10h20V11zm-6-6h4v6h-4zm-6 8h4v6H4zm16 6h-4v-6h4z"/></svg>
                     </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Corporate Events</h3>
-                    <p class="text-gray-600">Professional ambiance and comprehensive amenities for successful meetings and conferences.</p>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Corporate Events</h3>
+                    <p class="text-gray-600">Host successful conferences, seminars, and product launches with our modern facilities.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="gallery" class="bg-gray-100 section-padding">
-        <div class="container mx-auto px-6 md:px-12 text-center">
-            <h2 class="text-4xl font-bold text-indigo-800 mb-12">Our Gallery</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <div class="gallery-item shadow-md hover:shadow-xl">
-                    <img src="https://placehold.co/600x400/93C5FD/FFFFFF/webp" alt="Event Image 1" class="w-full h-full object-cover">
-                    <div class="gallery-overlay">
-                        <p class="font-semibold text-lg">Wedding Decor</p>
-                    </div>
-                </div>
-                <div class="gallery-item shadow-md hover:shadow-xl">
-                    <img src="https://placehold.co/600x400/A78BFA/FFFFFF/webp" alt="Event Image 2" class="w-full h-full object-cover">
-                    <div class="gallery-overlay">
-                        <p class="font-semibold text-lg">Reception Setup</p>
-                    </div>
-                </div>
-                <div class="gallery-item shadow-md hover:shadow-xl">
-                    <img src="https://placehold.co/600x400/C4B5FD/FFFFFF/webp" alt="Event Image 3" class="w-full h-full object-cover">
-                    <div class="gallery-overlay">
-                        <p class="font-semibold text-lg">Birthday Party</p>
-                    </div>
-                </div>
-                <div class="gallery-item shadow-md hover:shadow-xl">
-                    <img src="https://placehold.co/600x400/DDD6FE/FFFFFF/webp" alt="Event Image 4" class="w-full h-full object-cover">
-                    <div class="gallery-overlay">
-                        <p class="font-semibold text-lg">Corporate Event</p>
-                    </div>
-                </div>
-                <div class="gallery-item shadow-md hover:shadow-xl">
-                    <img src="https://placehold.co/600x400/93C5FD/FFFFFF/webp" alt="Event Image 5" class="w-full h-full object-cover">
-                    <div class="gallery-overlay">
-                        <p class="font-semibold text-lg">Festive Celebration</p>
-                    </div>
-                </div>
-                <div class="gallery-item shadow-md hover:shadow-xl">
-                    <img src="https://placehold.co/600x400/A78BFA/FFFFFF/webp" alt="Event Image 6" class="w-full h-full object-cover">
-                    <div class="gallery-overlay">
-                        <p class="font-semibold text-lg">Engagement Ceremony</p>
-                    </div>
-                </div>
-                <div class="gallery-item shadow-md hover:shadow-xl">
-                    <img src="https://placehold.co/600x400/C4B5FD/FFFFFF/webp" alt="Event Image 7" class="w-full h-full object-cover">
-                    <div class="gallery-overlay">
-                        <p class="font-semibold text-lg">Family Gathering</p>
-                    </div>
-                </div>
-                <div class="gallery-item shadow-md hover:shadow-xl">
-                    <img src="https://placehold.co/600x400/DDD6FE/FFFFFF/webp" alt="Event Image 8" class="w-full h-full object-cover">
-                    <div class="gallery-overlay">
-                        <p class="font-semibold text-lg">Award Ceremony</p>
-                    </div>
-                    </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="bg-indigo-800 text-white section-padding">
-        <div class="container mx-auto px-6 md:px-12 text-center">
-            <h2 class="text-4xl font-bold mb-8">Contact Us</h2>
-            <p class="text-lg mb-8">Ready to plan your unforgettable event? Get in touch with us today!</p>
-
+    <section class="py-16 bg-white rounded-xl shadow-lg mx-auto max-w-7xl mt-12 px-6 md:px-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-indigo-700 mb-12">What Our Clients Say</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div class="bg-indigo-700 p-8 rounded-lg shadow-xl text-left">
-                    <h3 class="text-2xl font-semibold mb-6">Our Details</h3>
-                    <p class="flex items-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-3">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 1.952-.8 3.792-2.126 5.093a9.75 9.75 0 01-5.093 2.126 9.75 9.75 0 01-5.093-2.126C4.8 14.292 4 12.452 4 10.5 4 6.91 6.91 4 10.5 4S17 6.91 17 10.5z" />
-                        </svg>
-                        [Your Full Address Here, e.g., Near Bodhgaya Temple, Bodhgaya, Bihar, India]
-                    </p>
-                    <p class="flex items-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-3">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.106a11.217 11.217 0 01-4.438-1.042c-.44-.165-.92-.1-.994.249l-1.07 3.552a.75.75 0 01-1.33 0l-1.07-3.552a1.106 1.106 0 00-.994-.249 11.217 11.217 0 01-4.438 1.042c-.501.14-.852.59-.852 1.106v1.372c0 1.241 1.009 2.25 2.25 2.25H17.5a2.25 2.25 0 002.25-2.25V6.75z" />
-                        </svg>
-                        [Your Phone Number, e.g., +91 12345 67890]
-                    </p>
-                    <p class="flex items-center mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-3">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.906l-11.25 6.468a2.25 2.25 0 01-2.181 0L2.92 8.95a2.25 2.25 0 01-1.07-1.906V6.75" />
-                        </svg>
-                        [Your Email Address, e.g., info@vishalbanquethall.com]
-                    </p>
-                    <div class="flex justify-center md:justify-start space-x-6 mt-6">
-                        <a href="[Your Facebook Profile URL]" target="_blank" class="text-white hover:text-indigo-300 transition duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.272 0-3.292 2.316-3.292 4.266v2.734z"/></svg>
-                        </a>
-                        <a href="[Your Instagram Profile URL]" target="_blank" class="text-white hover:text-indigo-300 transition duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c3.517 0 4.901.01 5.485.031.547.019.78.115.993.19.704.254 1.28.598 1.845 1.163.565.565.909 1.141 1.163 1.845.075.213.171.446.19.993.021.584.031 1.968.031 5.485s-.01 4.901-.031 5.485c-.019.547-.115.78-.19.993-.254.704-.598 1.28-1.163 1.845-.565.565-1.141.909-1.845 1.163-.213.075-.446.171-.993.19-.584.021-1.968.031-5.485.031s-4.901-.01-5.485-.031c-.547-.019-.78-.115-.993-.19-.704-.254-1.28-.598-1.845-1.163-.565-.565-.909-1.141-1.163-1.845-.075-.213-.171-.446-.19-.993-.021-.584-.031-1.968-.031-5.485s.01-4.901.031-5.485c.019-.547.115-.78.19-.993.254-.704.598-1.28 1.163-1.845.565-.565 1.141-.909 1.845-1.163.075-.213.171-.446.19-.993.021-.584.031-1.968.031-5.485zm0 1.64c-3.411 0-3.834.01-4.352.031-.299.019-.466.082-.679.157-.591.215-.993.447-1.395.849-.402.402-.634.804-.849 1.395-.075.213-.138.38-.157.679-.021.518-.031.941-.031 4.352s.01 3.834.031 4.352c.019.299.082.466.157.679.215.591.447.993.849 1.395.402.402.804.634 1.395.849.213.075.38.138.679.157.518.021.941.031 4.352.031s3.834-.01 4.352-.031c.299-.019.466-.082.679-.157.591-.215.993-.447 1.395-.849.402-.402.634-.804.849-1.395.075-.213.138-.38.157-.679.021-.518.031-.941.031-4.352s-.01-3.834-.031-4.352c-.019-.299-.082-.466-.157-.679-.215-.591-.447-.993-.849-1.395-.402-.402-.804-.634-1.395-.849-.075-.213-.138-.38-.157-.679-.021-.518-.031-.941-.031-4.352zm0 3.615c-3.218 0-5.825 2.607-5.825 5.825s2.607 5.825 5.825 5.825 5.825-2.607 5.825-5.825-2.607-5.825-5.825-5.825zm0 1.62c2.322 0 4.205 1.883 4.205 4.205s-1.883 4.205-4.205 4.205-4.205-1.883-4.205-4.205 1.883-4.205 4.205-4.205zm5.825-2.261c-.568 0-1.031.463-1.031 1.031s.463 1.031 1.031 1.031 1.031-.463 1.031-1.031-.463-1.031-1.031-1.031z"/></svg>
-                        </a>
-                        <a href="[Your Twitter Profile URL]" target="_blank" class="text-white hover:text-indigo-300 transition duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.407 0-6.168 2.761-6.168 6.169 0 .484.055.955.158 1.405-5.147-.258-9.721-2.729-12.783-6.467-.5.854-.784 1.84-.784 2.903 0 2.132 1.084 4.004 2.733 5.107-.804-.025-1.56-.246-2.222-.616v.081c0 2.986 2.127 5.472 4.94 6.046-.5.137-1.025.211-1.564.211-.383 0-.756-.038-1.124-.107.788 2.457 3.065 4.24 5.787 4.289-2.665 2.083-6.045 3.33-9.716 3.33-.629 0-1.25-.037-1.86-.11.777 2.106 2.607 3.623 4.673 4.257 2.486 1.134 5.378 1.802 8.563 1.802 10.276 0 15.938-8.525 15.938-15.939 0-.243-.006-.487-.015-.729.972-.7 1.808-1.588 2.479-2.585z"/></svg>
-                        </a>
-                    </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md border-l-4 border-indigo-500">
+                    <p class="text-lg italic text-gray-700 mb-4">"Vishal Banquet Hall made our wedding day absolutely perfect! The staff was incredibly supportive, and the venue looked stunning."</p>
+                    <p class="font-semibold text-gray-800">- Priya Sharma</p>
                 </div>
-
-                <div class="bg-indigo-700 p-8 rounded-lg shadow-xl text-left">
-                    <h3 class="text-2xl font-semibold mb-6">Send Us a Message</h3>
-                    <form action="[Your Form Submission URL - e.g., Formspree, Netlify Forms]" method="POST">
-                        <div class="mb-4">
-                            <label for="name" class="block text-white text-sm font-medium mb-2">Your Name</label>
-                            <input type="text" id="name" name="name" class="w-full p-3 rounded bg-indigo-600 border border-indigo-500 text-white placeholder-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="John Doe" required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="email" class="block text-white text-sm font-medium mb-2">Your Email</label>
-                            <input type="email" id="email" name="email" class="w-full p-3 rounded bg-indigo-600 border border-indigo-500 text-white placeholder-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="john.doe@example.com" required>
-                        </div>
-                        <div class="mb-6">
-                            <label for="message" class="block text-white text-sm font-medium mb-2">Your Message</label>
-                            <textarea id="message" name="message" rows="5" class="w-full p-3 rounded bg-indigo-600 border border-indigo-500 text-white placeholder-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="Tell us about your event..." required></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-white text-indigo-800 font-bold py-3 px-6 rounded-full text-lg shadow-md hover:bg-gray-200 transition duration-300 transform hover:scale-105">
-                            Send Message
-                        </button>
-                    </form>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md border-l-4 border-purple-500">
+                    <p class="text-lg italic text-gray-700 mb-4">"Excellent service and a beautiful space for our corporate event. Highly recommend for any professional gathering."</p>
+                    <p class="font-semibold text-gray-800">- Rajesh Kumar, CEO TechSolutions</p>
                 </div>
             </div>
-
-            <div class="mt-12 rounded-lg overflow-hidden shadow-xl">
-                <h3 class="text-2xl font-semibold mb-4">Find Us on Map</h3>
-                <iframe
-                    src="[Your Google Maps Embed Code - e.g., from Google Maps Share > Embed a map]"
-                    width="100%"
-                    height="450"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    class="rounded-lg"
-                ></iframe>
-                <p class="text-sm text-gray-300 mt-2">
-                    *Replace `[Your Google Maps Embed Code]` with the actual embed code from Google Maps for Bodhgaya.
-                </p>
+            <div class="mt-12 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="https://forms.gle/Dc7zt6C6AA4HTupF7" target="_blank" class="inline-block bg-indigo-600 text-white hover:bg-indigo-700 px-8 py-3 rounded-full text-lg font-semibold shadow-md transition duration-300">
+                    Leave a Google Review
+                </a>
+                <a href="https://form.jotform.com/251443928257059" target="_blank" class="inline-block bg-purple-600 text-white hover:bg-purple-700 px-8 py-3 rounded-full text-lg font-semibold shadow-md transition duration-300">
+                    Submit a Review
+                </a>
             </div>
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-white py-8 px-6 md:px-12">
-        <div class="container mx-auto text-center md:flex md:justify-between md:items-center">
-            <p class="mb-4 md:mb-0">&copy; 2025 Vishal Banquet Hall. All rights reserved.</p>
-            <div class="flex space-x-6 justify-center">
-                <a href="#home" class="text-gray-300 hover:text-white transition duration-300">Home</a>
-                <a href="#about" class="text-gray-300 hover:text-white transition duration-300">About Us</a>
-                <a href="#services" class="text-gray-300 hover:text-white transition duration-300">Services</a>
-                <a href="#gallery" class="text-gray-300 hover:text-white transition duration-300">Gallery</a>
-                <a href="#contact" class="text-gray-300 hover:text-white transition duration-300">Contact Us</a>
+    <section id="about" class="py-16 bg-gray-50 rounded-xl shadow-lg mx-auto max-w-7xl mt-12 px-6 md:px-12">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-indigo-700 text-center mb-12">About Us</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="lg:order-2">
+                    <img src="https://placehold.co/600x400/8B5CF6/FFFFFF?text=Our+Story" alt="Our Story Image" class="rounded-xl shadow-lg w-full h-auto object-cover">
+                </div>
+                <div class="lg:order-1">
+                    <h3 class="text-3xl font-semibold text-gray-800 mb-6">Our Story & Philosophy</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Vishal Banquet Hall was founded with a vision to provide a premier event space in Bodh Gaya, combining elegant design with unparalleled service. Since our establishment, we have been dedicated to making every event a resounding success, understanding that each celebration is unique and deserves meticulous attention.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Our philosophy revolves around customer satisfaction, attention to detail, and creating a seamless experience for our clients. We believe in building lasting relationships by exceeding expectations and ensuring every guest leaves with cherished memories.
+                    </p>
+                </div>
             </div>
+            <div class="mt-12">
+                <h3 class="text-3xl font-semibold text-gray-800 text-center mb-8">Why Choose Vishal Banquet Hall?</h3>
+                <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-lg text-gray-700">
+                    <li class="flex items-start">
+                        <span class="text-indigo-600 text-2xl mr-3">✓</span>
+                        <span>Spacious and Elegant Hall for all event sizes.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-indigo-600 text-2xl mr-3">✓</span>
+                        <span>Modern Amenities & State-of-the-art Sound System.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-indigo-600 text-2xl mr-3">✓</span>
+                        <span>Experienced and Dedicated Event Staff.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-indigo-600 text-2xl mr-3">✓</span>
+                        <span>Customizable Packages to fit your unique needs.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-indigo-600 text-2xl mr-3">✓</span>
+                        <span>Prime Location in Bodh Gaya with ample parking.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-indigo-600 text-2xl mr-3">✓</span>
+                        <span>Flexible Decor and Catering Partnerships.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-16 bg-white rounded-xl shadow-lg mx-auto max-w-7xl mt-12 px-6 md:px-12">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-indigo-700 text-center mb-12">Our Services & Amenities</h2>
+
+            <div class="flex flex-col lg:flex-row items-center gap-10 mb-16">
+                <div class="lg:w-1/2">
+                    <img src="https://placehold.co/700x450/4C51BF/FFFFFF?text=Dream+Weddings" alt="Wedding Setup" class="rounded-xl shadow-lg w-full h-auto object-cover">
+                </div>
+                <div class="lg:w-1/2">
+                    <h3 class="text-3xl font-semibold text-gray-800 mb-4">Weddings & Receptions</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        Your wedding day is a once-in-a-lifetime event, and at Vishal Banquet Hall, we are dedicated to making it absolutely perfect. Our spacious and elegantly designed hall provides the ideal backdrop for both grand ceremonies and intimate receptions. We offer flexible seating arrangements, stunning decor options, and work with trusted catering partners to ensure a culinary experience that delights your guests.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 text-lg">
+                        <li>Customizable decor themes</li>
+                        <li>Spacious dance floor</li>
+                        <li>Dedicated bridal changing rooms</li>
+                        <li>Assistance with vendor coordination</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-10 mb-16">
+                <div class="lg:w-1/2">
+                    <img src="https://placehold.co/700x450/6B46C1/FFFFFF?text=Joyful+Parties" alt="Birthday Party" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="lg:w-1/2">
+                    <h3 class="text-3xl font-semibold text-gray-800 mb-4">Birthday & Anniversary Parties</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        Celebrate life's milestones with joy and ease at Vishal Banquet Hall. Whether it's a vibrant birthday bash or a heartfelt anniversary celebration, our team helps you create a personalized event. We offer various themes, entertainment suggestions, and can assist with cake arrangements, ensuring a fun and memorable experience for all ages.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 text-lg">
+                        <li>Themed party decorations</li>
+                        <li>Sound system for music and announcements</li>
+                        <li>Flexible seating and dining layouts</li>
+                        <li>Kids' friendly arrangements (on request)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row items-center gap-10 mb-16">
+                <div class="lg:w-1/2">
+                    <img src="https://placehold.co/700x450/3182CE/FFFFFF?text=Professional+Events" alt="Corporate Event" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="lg:w-1/2">
+                    <h3 class="text-3xl font-semibold text-gray-800 mb-4">Corporate Events</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        For your business needs, Vishal Banquet Hall provides a professional and conducive environment. Our venue is equipped to host conferences, seminars, product launches, and team meetings. We offer high-speed internet, modern audiovisual equipment, and versatile setups to ensure your corporate event runs smoothly and effectively.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 text-lg">
+                        <li>High-speed Wi-Fi connectivity</li>
+                        <li>Projector and large screen</li>
+                        <li>Microphone and sound system</li>
+                        <li>Breakout areas (if required)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12">
+                <h3 class="text-3xl font-semibold text-gray-800 text-center mb-8">General Amenities</h3>
+                <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-lg text-gray-700">
+                    <li class="flex items-start">
+                        <span class="text-green-600 text-2xl mr-3">✓</span>
+                        <span>Fully Air-Conditioned Hall</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-600 text-2xl mr-3">✓</span>
+                        <span>High-Quality Sound System</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-600 text-2xl mr-3">✓</span>
+                        <span>Dynamic Lighting Options</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-600 text-2xl mr-3">✓</span>
+                        <span>Projector & Large Screen Facilities</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-600 text-2xl mr-3">✓</span>
+                        <span>Ample Parking Space</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-600 text-2xl mr-3">✓</span>
+                        <span>Separate Changing Rooms</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-600 text-2xl mr-3">✓</span>
+                        <span>Dedicated Event Coordinator Support</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-600 text-2xl mr-3">✓</span>
+                        <span>Flexible Catering Services (in-house or tie-ups)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-600 text-2xl mr-3">✓</span>
+                        <span>24/7 Power Backup</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-16 bg-gray-50 rounded-xl shadow-lg mx-auto max-w-7xl mt-12 px-6 md:px-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-indigo-700 mb-12">Our Gallery</h2>
+            <p class="text-lg text-gray-700 mb-8">Explore our beautiful banquet hall set up for various events.</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="relative group rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://placehold.co/600x400/FFD700/6B46C1?text=Wedding+Setup" alt="Wedding Setup" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white text-xl font-semibold">Wedding Decor</p>
+                    </div>
+                </div>
+                <div class="relative group rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://placehold.co/600x400/FFA07A/3182CE?text=Birthday+Party" alt="Birthday Party" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white text-xl font-semibold">Birthday Celebration</p>
+                    </div>
+                </div>
+                <div class="relative group rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://placehold.co/600x400/90EE90/D53F8C?text=Corporate+Event" alt="Corporate Event" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white text-xl font-semibold">Corporate Setup</p>
+                    </div>
+                </div>
+                <div class="relative group rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://placehold.co/600x400/ADD8E6/6B46C1?text=Hall+Interior" alt="Hall Interior" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white text-xl font-semibold">Hall Interior View</p>
+                    </div>
+                </div>
+                <div class="relative group rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://placehold.co/600x400/FFB6C1/3182CE?text=Catering+Display" alt="Catering Display" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white text-xl font-semibold">Catering Display</p>
+                    </div>
+                </div>
+                <div class="relative group rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://placehold.co/600x400/DDA0DD/D53F8C?text=Event+in+Progress" alt="Event in Progress" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white text-xl font-semibold">Event in Progress</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-white rounded-xl shadow-lg mx-auto max-w-7xl mt-12 px-6 md:px-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-indigo-700 mb-12">Contact Us</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <div class="text-left">
+                    <h3 class="text-3xl font-semibold text-gray-800 mb-6">Get in Touch</h3>
+                    <p class="text-lg text-gray-700 mb-4">
+                        Have questions or ready to book your event? Reach out to us using the details below or fill out our appointment form.
+                    </p>
+                    <div class="mb-4">
+                        <p class="text-xl font-semibold text-gray-800">Mobile Numbers:</p>
+                        <p class="text-lg text-gray-700">
+                            <a href="tel:+919228105245" class="text-indigo-600 hover:underline">9228105245</a>,
+                            <a href="tel:+918000037656" class="text-indigo-600 hover:underline">8000037656</a>
+                        </p>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-xl font-semibold text-gray-800">Email ID:</p>
+                        <p class="text-lg text-gray-700">
+                            <a href="mailto:vishalhospital@hotmail.co.in" class="text-indigo-600 hover:underline">vishalhospital@hotmail.co.in</a>
+                        </p>
+                    </div>
+                    <div class="mb-6">
+                        <p class="text-xl font-semibold text-gray-800">Address:</p>
+                        <p class="text-lg text-gray-700">
+                            Vishal Banquet Hall, Gaya-Dobhi Rd, Musatpura, Bodh Gaya, Bihar 823004
+                        </p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/wDVKzRU3DtCxVyvN7?g_st=ic" target="_blank" class="inline-block bg-purple-600 text-white hover:bg-purple-700 px-8 py-3 rounded-full text-lg font-semibold shadow-md transition duration-300 mt-4">
+                        Get Directions
+                    </a>
+                    <a href="https://form.jotform.com/251425170005443" target="_blank" class="inline-block bg-indigo-600 text-white hover:bg-indigo-700 px-8 py-3 rounded-full text-lg font-semibold shadow-md transition duration-300 mt-4 ml-0 sm:ml-4">
+                        Book an Appointment
+                    </a>
+                </div>
+
+                <div class="w-full h-96 rounded-xl overflow-hidden shadow-lg">
+                    <iframe
+                        src="https://maps.app.goo.gl/y1QDH2snfhB1BDdZA?g_st=ic"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="rounded-xl"
+                    ></iframe>
+                </div>
+            </div>
+
+            <div class="mt-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-6">Follow Us</h3>
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-indigo-600 transition duration-300 text-4xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"/></svg>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-indigo-600 transition duration-300 text-4xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none"><path fill="currentColor" d="M12 2c2.71 0 3.05.01 4.12.06c1.07.05 1.79.21 2.42.46c.6.25 1.12.59 1.62 1.08c.5.5.84 1.02 1.09 1.62c.25.63.41 1.35.46 2.42c.05 1.07.06 1.41.06 4.12s-.01 3.05-.06 4.12c-.05 1.07-.21 1.79-.46 2.42c-.25.6-.59 1.12-1.08 1.62c-.5.5-.84-1.02-1.09-1.62c-.25-.63-.41-1.35-.46-2.42c-.05-1.07-.06-1.41-.06-4.12s.01-3.05.06-4.12c.05-1.07.21-1.79.46-2.42c.25-.6.59-1.12 1.08-1.62c.5-.5 1.02-.84 1.62-1.09c.63-.25 1.35-.41 2.42-.46C8.95 2.01 9.29 2 12 2m0-2c-2.76 0-3.1.01-4.18.06c-1.08.05-1.8.21-2.44.47c-.64.25-1.2.6-1.75 1.15C2.08 3.96 1.73 4.52 1.48 5.16c-.26.64-.42 1.36-.47 2.44C.99 8.9.98 9.24.98 12s.01 3.1.06 4.18c.05 1.08.21 1.8.47 2.44c.25.64.6 1.2 1.15 1.75c.55.55 1.11.9 1.75 1.15c.64.26 1.36.42 2.44.47c1.08.05 1.42.06 4.18.06s3.1-.01 4.18-.06c1.08-.05 1.8-.21 2.44-.47c.64-.25 1.2-.6 1.75-1.15c.55-.55.9-1.11 1.15-1.75c-.26-.64-.42-1.36-.47-2.44C15.1.01 14.76 0 12 0m0 5.83A6.17 6.17 0 0 0 5.83 12A6.17 6.17 0 0 0 12 18.17A6.17 6.17 0 0 0 18.17 12A6.17 6.17 0 0 0 12 5.83m0 2A4.17 4.17 0 1 1 7.83 12A4.17 4.17 0 0 1 12 7.83m6.41-3.23a1.46 1.46 0 1 0 0 2.92a1.46 1.46 0 0 0 0-2.92"/></g></svg>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-indigo-600 transition duration-300 text-4xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.49-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.25 7.47 3.27 4.9c-.36.62-.56 1.35-.56 2.12c0 1.48.75 2.79 1.91 3.56c-.7-.02-1.37-.21-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07c.59 1.84 2.3 3.18 4.33 3.22c-1.48 1.16-3.35 1.85-5.38 1.85c-.35 0-.69-.02-1.03-.06c1.92 1.29 4.18 2.05 6.62 2.05c8 0 12.4-6.63 12.4-12.4c0-.19-.01-.38-.01-.57c.85-.61 1.58-1.37 2.16-2.26"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8 mt-12 rounded-t-lg">
+        <div class="container mx-auto text-center">
+            <p>© 2025 Vishal Banquet Hall. All rights reserved.</p>
+            <p class="mt-2 text-sm">Designed with ❤️ for your special moments.</p>
         </div>
     </footer>
+
 </body>
 </html>
